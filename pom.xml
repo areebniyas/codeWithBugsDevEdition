@@ -12,6 +12,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <sonar.organization>areebniyas</sonar.organization>
+        <sonar.host.url>https://00af-112-134-174-239.ap.ngrok.io/</sonar.host.url> 
+             
     </properties>
 
 </project>
