@@ -35,4 +35,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=areebniyas_codeWithBugsDevEdition_AYPw3yC1f5aMopibdE3U -Dsonar.pullrequest.key=${{ github.event.pull_request.number }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=areebniyas_codeWithBugsDevEdition_AYPw3yC1f5aMopibdE3U -Dsonar.pullrequest.key=`if [ -z "${{github.event.number}}"  ]; then echo ${{github.event.number}}; else echo ${{github.sha}}; fi`
