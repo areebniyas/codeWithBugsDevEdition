@@ -6,6 +6,7 @@ public class Main {
 
         }finally {
             throw new IllegalAccessError();
+            //change from third branch
 
         }
     }
