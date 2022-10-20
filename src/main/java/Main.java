@@ -14,4 +14,8 @@ public class Main {
         return i;
     }
 
+    public int methodFromSecondBranch(int i){
+        return i;
+    }
+
 }
